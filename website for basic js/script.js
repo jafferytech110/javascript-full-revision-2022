@@ -51,6 +51,26 @@ console.log(Math.pow(3,2))
 console.log(Math.sqrt(16))
 
 
+// formula to find out hypotenus of a triangle
+
+// let a,b,c;
+
+// a = window.prompt('Enter side A')
+// a = Number(a)
+
+// b = window.prompt('Enter side B')
+// b = Number(b)
+
+// c = Math.sqrt(Math.pow(a,2) + Math.pow(b,2))
 
 
+document.querySelector('#submit-triangle').onclick = () => {
+    console.log('clicked')
+    let a,b,ca
+    a = Number(document.getElementById('first-side').value)
+    b = Number(document.getElementById('second-side').value)
+
+    ca = Math.sqrt(Math.pow(a,2) + Math.pow(b,2))
+    document.getElementById('third-side').innerText = `the third side is ${ca}`
+}
 
