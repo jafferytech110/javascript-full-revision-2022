@@ -74,3 +74,59 @@ document.querySelector('#submit-triangle').onclick = () => {
     document.getElementById('third-side').innerText = `the third side is ${ca}`
 }
 
+
+
+// useful string methods
+
+let userName = 'someone'
+
+console.log(userName.length)
+console.log(userName.charAt(1)) // prints o
+console.log(userName.indexOf('m'))
+
+
+userName = userName.trim() //removing spaces from start and end
+console.log(userName.toUpperCase())
+
+// slicing
+let fullName = 'Sarfaraz Jaffery'
+let firstName2
+let lastName2 
+
+// slice(startingindex, ending index)
+lastName2 = fullName.slice(9)
+console.log(lastName2)
+
+firstName2 = fullName.slice(0,fullName.indexOf(" "))
+console.log(firstName2)
+
+
+// method chaining
+let chainingName = 'broCode'
+let lettter = chainingName.charAt(0).toUpperCase()
+console.log(lettter)
+
+
+// conditions
+let age = 21
+
+if (age >= 18) {
+    console.log('adult')
+}
+else if(age <= 0) {
+    console.log('ask someone to have unprotected sex so that you get chance to come in this world.')
+}
+else{
+    console.log('not adult')
+}
+
+
+
+// checkbox
+document.getElementById('submit-triangle').onclick = () => {
+    if(document.getElementById('tri-checkbox').checked) {
+        console.log('good, sending result')
+    } else {
+        console.log('not happy but still sending solution')
+    }
+}
