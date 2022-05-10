@@ -130,3 +130,40 @@ document.getElementById('submit-triangle').onclick = () => {
         console.log('not happy but still sending solution')
     }
 }
+
+// and or not logics
+// && AND both condition must be true
+// || OR either of the condition
+// !
+let temp = 50
+if(temp < 100 && temp > 20) {
+    console.log('nice temperature')
+}
+
+// ! not
+let speed = 70
+
+if(!(speed > 80)) {
+    console.log('drive fast')
+}
+
+//while
+let speedOfCar = 20
+
+while (speedOfCar < 100) {
+    console.log('increasing speed')
+    if(speedOfCar==100)
+    speedOfCar++
+}
+
+// do while loop
+// let engine = 'stop'
+
+// do{
+//     console.log('starting engine')
+// } while (engine != 'stop')
+
+// for loop
+for(let i=0;i<10;i++) {
+    console.log(i)
+}
