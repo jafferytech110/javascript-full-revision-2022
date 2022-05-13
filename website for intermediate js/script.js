@@ -49,3 +49,33 @@ let items = 3
 let total = 72
 
 console.log(`${userName} has bought ${items} items. ${userName} has to pay ${total}$`)
+
+
+ // toLocaleString() method
+ let myNum = 123456.789
+
+ myNum = myNum.toLocaleString("en-US", {style:"currency",currency: "PKR"})
+ console.log(myNum)
+
+ myNum = myNum.toLocaleString("de-DE")
+ console.log(myNum)
+
+ const answer = Math.floor(Math.random() * 10 + 1)
+ let guesses = 0
+
+ document.getElementById('submit-button').onclick = () => {
+    let guess = document.getElementById('guess-field').value
+    guesses += 1
+
+    if(guess == answer) {
+        alert(`${answer} is the number and it took you ${guesses} guesses.`)
+    }
+    else if (guess < answer){
+        alert('too small')
+    }
+    else{
+        alert('too large')
+    }
+ }
+
+ 
