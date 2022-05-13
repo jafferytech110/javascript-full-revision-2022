@@ -40,3 +40,15 @@ function displayConsole(output){
 function displayDOM(output){
     document.getElementById('sum-output').innerHTML = output
 }
+
+
+
+// anonymous funciton or function expression
+const someHelloFunction = () => {
+    console.log('i am anonymous function')
+}
+
+someHelloFunction()
+
+
+

@@ -45,3 +45,43 @@ let newNumbers = [1,2,3,4,5]
 
 let square = newNumbers.map(item => Math.pow(item,2))
 console.log(square)
+
+// array filter
+// creates a new array with all elements that pass the specific test define in function which is passed as an argument in filter method like callback function
+
+let studentAges = [18,16,21,17,19,40]
+
+let adults = studentAges.filter( student => {
+    return student >= 18
+})
+
+console.log(`student above 18 are ${adults}`)
+
+
+
+//array reduce 
+// reduces an array to a single value
+// like to sum up all the values
+
+let newPrices = [5,10,15,20,23]
+let newTotal = newPrices.reduce(checkOut)
+
+console.log(`the total is ${newTotal}`)
+
+function checkOut(total,element) {
+    return total + element
+} 
+
+
+// array sort numbers
+let grades = [100,50,90,78,89]
+
+// desceding order
+console.log(grades.sort((x,y) => {
+    return y - x
+}))
+
+// ascending order
+console.log(grades.sort((x,y) => {
+    return x- y
+}))
