@@ -43,12 +43,14 @@ function displayDOM(output){
 
 
 
-// anonymous funciton or function expression
+// anonymous funciton or function expression plus arrow function
+
 const someHelloFunction = () => {
     console.log('i am anonymous function')
 }
 
 someHelloFunction()
+
 
 
 
