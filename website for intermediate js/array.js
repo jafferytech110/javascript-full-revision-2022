@@ -85,3 +85,28 @@ console.log(grades.sort((x,y) => {
 console.log(grades.sort((x,y) => {
     return x- y
 }))
+
+
+
+// array shuffling
+let cards = ['A','2','3','4','5','6','7','8','9','J','Q','K']
+
+function shuffle(arrayToShuffle) {
+    let currentIndex = arrayToShuffle.length
+
+    while(currentIndex != 0) {
+        let randomIndex = Math.floor(Math.random() * arrayToShuffle.length)
+        currentIndex -=1
+
+        let temp = arrayToShuffle[currentIndex]
+        arrayToShuffle[currentIndex] = arrayToShuffle[randomIndex]
+        arrayToShuffle[randomIndex] = temp
+    }
+    return arrayToShuffle
+}
+
+shuffle(cards)
+
+console.log(cards)
+
+

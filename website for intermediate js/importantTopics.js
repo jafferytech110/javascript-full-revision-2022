@@ -18,7 +18,7 @@ function sumSomething(...numbers) {
 console.log(sumSomething(a,b,c,d,e))
 
 
-// **********************************************************************************************************************************
+// ****************************************************************
 
 // callback a function passed as an argument to another function
 // it ensures that function is not run unless some task is completed, in below example sum of a and b is completed then output is gicven
@@ -41,6 +41,7 @@ function displayDOM(output){
     document.getElementById('sum-output').innerHTML = output
 }
 
+// *******************************************************************
 
 
 // anonymous funciton or function expression plus arrow function
@@ -51,6 +52,68 @@ const someHelloFunction = () => {
 
 someHelloFunction()
 
+// **********************************************************************
+
+// nested functions
+// Functions inside other function
+// Outer functions have access to inner functions
+// inner functions are hidden from outside that adds some Security
+// used in closures as well
 
 
+let userName2 = 'Bro'
+let userInbox = 0
+
+
+function login(){
+
+    displayUserName()
+    displayUserInbox()
+
+    function displayUserName(){
+        console.log(`Welcome ${userName2}`)
+    }
+    
+    function displayUserInbox(){
+        console.log(`you have ${userInbox} messages`)
+    }
+}
+
+// in order to call userName and userInbox functions, we need to call login function
+login()
+
+
+// **************************************************************************************
+
+// Map is object that holds key value pair as dictionary in python
+
+const store = new Map([
+    ['tshirt', 20],
+    ['socks', 30],
+    ['underwear',50]
+])
+
+let shoppingCart = 0
+// to get value
+shoppingCart += store.get('tshirt')
+console.log(shoppingCart)
+
+// to set value
+console.log(`old price for tshirt is $ ${store.get('tshirt')}`)
+store.set('tshirt', 50)
+console.log(`new price for tshir is $ ${store.get('tshirt')}`)
+
+// deleting
+store.delete('socks')
+
+// checking if any item exists 
+console.log(store.has('socks'))
+
+// checking the number of pairs
+console.log(store.size)
+
+// output of every key value
+store.forEach((value,key) => console.log(`${key} is $${value}`))
+
+// *******************************************************
 
