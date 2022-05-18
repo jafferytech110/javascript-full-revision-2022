@@ -182,3 +182,87 @@ console.log(rabbit.age);
 console.log(rabbit.runSpeed);
 
 
+
+//getters and setters
+// get = binds an object property to a function 
+//          when that property is accessed
+// set = binds an object property to a function
+//          when that property is assigned a value
+
+class Car{
+    constructor(power){
+        this._gas = 25;
+        this._power = power;
+    }
+    get power(){
+        return `${this._power}hp`;
+    }
+    get gas(){
+        return `${this._gas}L (${this._gas / 50 * 100}%)`;
+    }
+    set gas(value){
+        if(value > 50){
+            value = 50;
+        }
+        else if(value < 0){
+            value = 0;
+        }
+        this._gas = value;
+    }
+}
+
+let car2 = new Car(400);
+
+car.gas = 100;
+
+console.log(car.power);
+console.log(car.gas);
+
+
+
+// passing object as argument to function
+class Bike {
+    constructor(model,year,color) {
+        this.model = model
+        this.year = year
+        this.color = color
+    }
+}
+
+const bike1 = new Bike('BMW',2022,'red')
+const bike2 = new Bike('yamaha', 2021, 'blue')
+const bike3 = new Bike('suzuki',2020,'black')
+
+
+function displayInfo(bike){
+    console.log(bike.model)
+}
+
+displayInfo(bike1)
+
+// array of objects
+const bikes = [bike1,bike2,bike3]
+console.log(bikes[1].model) //shows yamaha
+
+
+
+// anonymous objects
+class CardNew{
+    constructor(value, suit){
+        this.value = value;
+        this.suit = suit;
+    }
+}
+
+let cards3 = [new CardNew("A", "Hearts"), 
+             new CardNew("A", "Spades"), 
+             new CardNew("A", "Diamonds"), 
+             new CardNew("A", "Clubs"), 
+             new CardNew("2", "Hearts"), 
+             new CardNew("2", "Spades"), 
+             new CardNew("2", "Diamonds"), 
+             new CardNew("2", "Clubs")];
+
+cards3.forEach(card => console.log(`${card.value} ${card.suit}`));
+
+
