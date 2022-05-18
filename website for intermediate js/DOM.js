@@ -40,3 +40,57 @@ function countUp(){
         clearInterval(myTimer);
     }
 }
+
+
+//************************************************************************** */
+// js date object
+// Date() is a class with constructor
+let date = new Date()
+
+// more readable now
+// date = date.toLocaleString()
+console.log(date)
+document.getElementById('time').innerText = formatDate(date)
+
+/*
+let year = date.getFullYear();
+let dayOfMonth = date.getDate();
+let dayOfWeek = date.getDay();
+let month = date.getMonth();
+let hour = date.getHours();
+let minutes = date.getMinutes();
+let seconds = date.getSeconds();
+let ms = date.getMilliseconds();
+*/
+/*
+date.setFullYear(2024);
+date.setMonth(11);
+date.setDate(31);
+date.setHours(23);
+date.setMinutes(1);
+date.setSeconds(30);
+date.setMilliseconds(0);
+*/
+
+function formatDate(date) {
+    let year = date.getFullYear()
+    let month = date.getMonth() + 1
+    let day = date.getDate()
+
+    return `${day}.${month}.${year}`
+}
+
+//********************************************** */
+
+// console.time() = Starts a timer you can use to 
+//                               track how long an operation takes
+//                              Give each timer a unique name.
+
+//start
+console.time("Response time");
+
+alert("CLICK THE OK BUTTON!");
+//setTimeout(() => console.log("HELLO!"), 3000);
+
+//end
+console.timeEnd("Response time");
