@@ -45,3 +45,9 @@ child.style.backgroundColor = "lightgreen";
 const h1Tag = document.createElement('h1')
 h1Tag.textContent = 'came from JS not html'
 document.body.prepend(h1Tag)
+
+
+// window = interface used to talk to the web browser
+//                   the DOM is a property of the window
+console.log(window.innerWidth)
+console.log(window.innerHeight)

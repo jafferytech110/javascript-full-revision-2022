@@ -1,0 +1,12 @@
+#my-div{
+    background-color: lightcoral;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+#my-canvas{
+    border: 1px solid black;
+    background-color: aqua;
+    margin-top: 2rem;
+}
