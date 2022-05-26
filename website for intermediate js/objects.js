@@ -11,6 +11,20 @@ const car = {
     }
 }
 
+let cat = {
+    name: 'puppy',
+    age: 5,
+    city: 'Lahore',
+    walk: () => {
+        console.log('i don\'t walk, I am lazy')
+    },
+    food: {
+        favorite: 'ice cream',
+        notFavorite: 'cake'
+    }
+}
+
+console.log(cat.walk())
 console.log(car.drive())
 
 
